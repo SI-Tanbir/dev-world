@@ -10,7 +10,7 @@ function App() {
     <>
    
       <div>
-      <h1 className='text-6xl'>Knowledge cafe</h1>
+      <h1 className='text-6xl bg-purple-500'>Knowledge cafe</h1>
 
       </div>
       
