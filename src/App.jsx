@@ -21,7 +21,7 @@ function App() {
   return (
     <div>
        <div>
-      <h1 className=' text-center text-6xl bg-purple-500'>Knowledge cafe</h1>
+      <h1 className=' text-center text-6xl bg-purple-500'>DEV World</h1>
 
       </div>
       {/* startin of blog post here */}
