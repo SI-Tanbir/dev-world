@@ -1,7 +1,8 @@
 import { MdOutlineBookmarks } from "react-icons/md";
 
 
-const Blog = ({data})=>{
+const Blog = ({data,addToBookmarked})=>{
+
 
     
     let {id,cover,author_img,author,reading_time,posted_date,title,hashtags}=data;
@@ -9,7 +10,7 @@ const Blog = ({data})=>{
     return(
         
        <div className="mt-8">
-        {/* starting of post part */}
+       
 
 
 <div key={id}>
@@ -35,7 +36,7 @@ const Blog = ({data})=>{
   </div>
    <div className="flex">
    <p>{reading_time} reaming time</p>
-   <button className="m-4 mt-0 text-red-500 text-xl"><MdOutlineBookmarks />
+   <button onClick={()=>addToBookmarked(data)} className="m-4 mt-0 text-red-500 text-xl"><MdOutlineBookmarks />
    </button>
 
 

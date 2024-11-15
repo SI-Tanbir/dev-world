@@ -1,13 +1,22 @@
 
 
 
+import { useState } from 'react'
 import './App.css'
 import Blogs from './assets/components/Blogs/Blogs'
 import Bookmarks from './assets/components/Blogs/bookmarks'
 
 
 function App() {
- 
+
+  let [bookmark,setBookmark]=useState([])
+  
+  let addToBookmarked =(booked)=>{
+    let newBooked=[...bookmark,booked]
+    setBookmark(newBooked)
+    // console.log(newBooked)
+  }
+  // console.log(bookmark)
 
   return (
     <div>
@@ -19,8 +28,8 @@ function App() {
       <div className=' flex mx-20'>
   
 
-      <Blogs></Blogs>
-      <Bookmarks></Bookmarks>
+      <Blogs addToBookmarked={addToBookmarked}></Blogs>
+      <Bookmarks bookedData={bookmark}></Bookmarks>
       </div>
     </div>
   )
