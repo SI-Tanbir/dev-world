@@ -1,7 +1,7 @@
 import { MdOutlineBookmarks } from "react-icons/md";
 
 
-const Blog = ({data,addToBookmarked})=>{
+const Blog = ({data,addToBookmarked,markAsRead})=>{
 
 
     
@@ -9,7 +9,7 @@ const Blog = ({data,addToBookmarked})=>{
 
     return(
         
-       <div className="mt-8">
+       <div className="mt-8 ">
        
 
 
@@ -48,7 +48,7 @@ const Blog = ({data,addToBookmarked})=>{
 <h2 className="font-extrabold text-2xl">{title}</h2>
 <p>{hashtags.map(hash=> hash )}</p>
 
-
+<button onClick={()=>markAsRead(reading_time)} className="underline text-purple-900 ">Mark as Read</button>
 </div>
 
 

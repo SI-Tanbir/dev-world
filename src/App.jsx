@@ -8,6 +8,14 @@ import Bookmarks from './assets/components/Blogs/bookmarks'
 
 
 function App() {
+  // stating of markas read funtion
+  let [readingTime,setReadingTime]=useState(0);
+let markAsRead =(reading_time)=>{
+
+      setReadingTime(readingTime + reading_time)
+ 
+}
+console.log(readingTime)
 
   let [bookmark,setBookmark]=useState([])
   
@@ -28,8 +36,8 @@ function App() {
       <div className=' flex mx-20'>
   
 
-      <Blogs addToBookmarked={addToBookmarked}></Blogs>
-      <Bookmarks bookedData={bookmark}></Bookmarks>
+      <Blogs markAsRead={markAsRead} addToBookmarked={addToBookmarked}></Blogs>
+      <Bookmarks readingTime={readingTime} bookedData={bookmark}></Bookmarks>
       </div>
     </div>
   )
