@@ -14,7 +14,7 @@ function App() {
 
       </div>
       {/* startin of blog post here */}
-      <div className='text-center justify-center flex '>
+      <div className=' '>
   
 
       <Blogs></Blogs>

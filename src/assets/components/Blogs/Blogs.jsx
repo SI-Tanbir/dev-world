@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import Blog from "./Blog"
 
 const Blogs=()=>{
 
@@ -28,25 +29,13 @@ const Blogs=()=>{
     // ​
     // title: "The Journey of React"
     return(
-        <div>
-            {
-                blogs.map(res => <div key={res.id}>
-                    <img src={res.cover} alt="" width='200px' />
-                    <div>
-                    <div>
-                        <div>
-                        <img  src={res.author_img} width='50px' alt="" />
-                        </div>
-                        <h3>{res.author}</h3>
-                        <p>{res.posted_date}</p>
-                    </div>
 
-                    <p>{res.reading_time}</p>
-                    </div>
-                    <h2>{res.title}</h2>
-                    <p>{res.hashtags.map(hash=> hash )}</p>
-                </div>)
+        <div>
+
+            {
+                blogs.map(res => <Blog key={res.id} data={res}></Blog> )
             }
+
 
         </div>
     )
