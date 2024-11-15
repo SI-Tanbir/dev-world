@@ -1,11 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
+
+
 import './App.css'
 import Blogs from './assets/components/Blogs/Blogs'
+import Bookmarks from './assets/components/Blogs/bookmarks'
+
 
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
     <div>
@@ -14,10 +16,11 @@ function App() {
 
       </div>
       {/* startin of blog post here */}
-      <div className=' '>
+      <div className=' flex mx-20'>
   
 
       <Blogs></Blogs>
+      <Bookmarks></Bookmarks>
       </div>
     </div>
   )

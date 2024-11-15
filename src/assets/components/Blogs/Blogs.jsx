@@ -30,7 +30,7 @@ const Blogs=()=>{
     // title: "The Journey of React"
     return(
 
-        <div>
+        <div className="w-2/3">
 
             {
                 blogs.map(res => <Blog key={res.id} data={res}></Blog> )
