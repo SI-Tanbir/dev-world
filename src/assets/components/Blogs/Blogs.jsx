@@ -35,7 +35,7 @@ const Blogs=()=>{
                     <div>
                     <div>
                         <div>
-                        <img src={res.author_img} width='50px' alt="" />
+                        <img  src={res.author_img} width='50px' alt="" />
                         </div>
                         <h3>{res.author}</h3>
                         <p>{res.posted_date}</p>
