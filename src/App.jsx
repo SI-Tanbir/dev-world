@@ -8,14 +8,7 @@ import Bookmarks from './assets/components/Blogs/bookmarks'
 
 
 function App() {
-  // stating of markas read funtion
-  let [readingTime,setReadingTime]=useState(0);
-let markAsRead =(reading_time)=>{
 
-      setReadingTime(readingTime + reading_time)
- 
-}
-console.log(readingTime)
 
   let [bookmark,setBookmark]=useState([])
   
@@ -25,6 +18,21 @@ console.log(readingTime)
     // console.log(newBooked)
   }
   // console.log(bookmark)
+
+
+
+  // stating of markas read funtion
+  let [readingTime,setReadingTime]=useState(0);
+let markAsRead =(reading_time,id)=>{
+
+      setReadingTime(readingTime + reading_time)
+    
+ 
+      // console.log(id)
+      //now well remove the markasread  on 
+      let remainingBookmarks= bookmark.filter(boo=> boo.id !== id);
+      setBookmark(remainingBookmarks);
+}
 
   return (
     <div>

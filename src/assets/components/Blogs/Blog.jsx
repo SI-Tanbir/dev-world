@@ -48,7 +48,7 @@ const Blog = ({data,addToBookmarked,markAsRead})=>{
 <h2 className="font-extrabold text-2xl">{title}</h2>
 <p>{hashtags.map(hash=> hash )}</p>
 
-<button onClick={()=>markAsRead(reading_time)} className="underline text-purple-900 ">Mark as Read</button>
+<button onClick={()=>markAsRead(reading_time,id)} className="underline text-purple-900 ">Mark as Read</button>
 </div>
 
 
